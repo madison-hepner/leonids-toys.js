@@ -26,11 +26,12 @@ const toys = [
 
 
 
+
+
 for (const toy of toys) {
-    const toyToFind = prompt("What's the id of the phone you'd like?");
+    const toyToFind = prompt("What's the id of the toy you'd like?");
     if (toy.id === toyToFind) {
         toy.price = toy.price / 100 * 5 + toy.price
-        console.log(`${toy.name} costs $${toy.price}`);
     }
     alert(`${toy.name} costs $${toy.price}`);
 }
