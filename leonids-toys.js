@@ -1,4 +1,3 @@
-const toyToFind = 1
 
 const toys = [
     {
@@ -26,6 +25,9 @@ const toys = [
     }
 ]
 
+const toyToFind = prompt("What's the id of the phone you'd like?");
+alert(`${toy.name} costs $${toy.price}`);
+
 for (const toy of toys) {
     if (toy.id === toyToFind) {
         toy.price = toy.price / 100 * 5 + toy.price
@@ -34,12 +36,9 @@ for (const toy of toys) {
 }
 
 
-/*  TRYING TO PROMPT USER RESPONSE?
-prompts response, but does not return value
 
-const toyToFind = prompt("What's the id of the phone you'd like?");
-alert(`${toy.name} costs $${toy.price}`);
 
-*/
+
+
 
 
