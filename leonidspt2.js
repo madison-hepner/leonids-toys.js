@@ -26,14 +26,15 @@ const toys = [
 
 
 
+const toyToFind = prompt("What's the id of the toy you'd like?");
 
 
 for (const toy of toys) {
-    const toyToFind = prompt("What's the id of the toy you'd like?");
-    if (toy.id === toyToFind) {
+    if (toy.id === parseInt(toyToFind)) {
         toy.price = toy.price / 100 * 5 + toy.price
+        alert(`${toy.name} costs $${toy.price}`);
     }
-    alert(`${toy.name} costs $${toy.price}`);
+
 }
 
 
