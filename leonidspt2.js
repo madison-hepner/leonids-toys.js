@@ -38,3 +38,4 @@ for (const toy of toys) {
 }
 
 
+// loop inside a loop that asks user for what kind of toy, then the id?
