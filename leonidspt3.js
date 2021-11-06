@@ -65,7 +65,7 @@ const toysArray = [
     }
 ]
 
-let newArray = [
+let newToyArray = [
 
 ]
 
@@ -75,75 +75,17 @@ const typeToyToFind = prompt("What's the type of toy would you like? Our invento
 // the goal is to do a loop inside of a loop with a conditional, for every toy, if toy type is equal to the typetoytofind, it'll go through each and make a new array using map? or does that not work.
 for (const toy of toysArray) {
     if (toy.type === (typeToyToFind.toLowerCase())) {
-        newArray.push(toy.name)
-        newArray.push(toy.price)
-        }
-        
-
-        }
-
-alert(`Under '${typeToyToFind}' we have: ${newArray}`);
-    
-
-
-
-
-        // toy.price = toy.price / 100 * 5 + toy.price
-        // alert(`${toy.name} costs $${toy.price}`);
-
-    
-// alert(`Under '${typeToyToFind}' we have: ${newArray.toy1}`);
-
-
-
-
-
-
-
-/*
-
-let newArray = [
-
-]
-
-
-// this prompts the user in browser to enter what type of toy they're looking for
-const typeToyToFind = prompt("What's the type of toy would you like? Our inventory includes: action figures, legos, dolls, and plush toys.");
-
-// the goal is to do a loop inside of a loop with a conditional, for every toy, if toy type is equal to the typetoytofind, it'll go through each and make a new array using map? or does that not work.
-for (const toy of toysArray) {
-    if (toy.type === (typeToyToFind.toLowerCase())) {
-        const addToyToNewArray = (toyObject) => {
-            const currentLength = newArray.length
-        }
-        
-        
-        if (currentLength === 0) {
-            const toy1 = {
-                
+        newToyArray.push(toy) }
             }
-            newArray.push(toy1)
+ // string to combine everything in       
+let toyString = ''
 
-        }
-
-         const addToyToInventory = (toyObject) => {
-    const lastIndex = toys.length - 1
-    const currentLastToy = toys[lastIndex]
-    const maxId = currentLastToy.id
-    const idForNewToy = maxId + 1
-
-    toyObject.id = idForNewToy
-    toys.push(toyObject)
-
+for (const toy of newToyArray) {
+    const partialString = `\n${toy.name} $${toy.price}.00`
+    toyString += partialString
 }
 
-
-
-        // toy.price = toy.price / 100 * 5 + toy.price
-        // alert(`${toy.name} costs $${toy.price}`);
-    }}
-
+alert(`Under '${typeToyToFind}' we have: ${toyString}`);
     
-    alert(`Under '${typeToyToFind}' we have: ${newArray.toy1}`);
- // */
-       
+
+// const toy1 = toysArray.concat(newArray)
